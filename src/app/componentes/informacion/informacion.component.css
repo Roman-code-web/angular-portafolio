@@ -1,0 +1,12 @@
+.informacion__img{
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+}
+.informacion__titulo{
+    font-size: 2.5rem;
+}
+.informacion__p{
+    font-size: 1rem;
+    text-align: justify
+}

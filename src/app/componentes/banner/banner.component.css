@@ -2,10 +2,15 @@
     font-size: 5.5rem;
 }
 .animacion{
-    -webkit-animation: tracking-in-expand 5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-	        animation: tracking-in-expand 5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    -webkit-animation: animaciontexto 5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: animaciontexto 5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
-@-webkit-keyframes tracking-in-expand {
+.banner__div{
+    padding-top: 100px ;
+    padding-bottom: 100px;
+    margin-bottom: 100px;
+}
+@-webkit-keyframes animaciontexto {
     0% {
       letter-spacing: -0.5em;
       opacity: 0;
@@ -17,7 +22,7 @@
       opacity: 1;
     }
   }
-  @keyframes tracking-in-expand {
+  @keyframes animaciontexto {
     0% {
       letter-spacing: -0.5em;
       opacity: 0;
@@ -30,3 +35,11 @@
     }
   }
   
+  @media (max-width: 700px) { 
+  .titulo{
+    font-size:2.5rem;
+  }
+  .banner__div{
+    margin-bottom: 0px;
+}
+}
