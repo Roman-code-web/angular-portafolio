@@ -7,8 +7,16 @@
     border-radius: 15px;
 }
 .nav__link__a:hover{
-    background-color: #150050;
+    background-color: #000;
     color: #fff !important;
     margin: 0px 20px;
 
+}
+.active{
+    background-color: #000;
+    color: #fff!important;
+
+}
+.active:hover{
+    
 }

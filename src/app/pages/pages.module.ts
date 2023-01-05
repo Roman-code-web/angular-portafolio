@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home/home.component';
 import { ContactanosComponent } from './contactanos/contactanos.component';
+import { ComponentesModule } from '../componentes/componentes.module';
 
 
 
@@ -11,7 +12,8 @@ import { ContactanosComponent } from './contactanos/contactanos.component';
     ContactanosComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ComponentesModule
   ],exports:[
     HomeComponent,
     ContactanosComponent
