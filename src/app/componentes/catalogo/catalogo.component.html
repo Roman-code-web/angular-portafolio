@@ -1,0 +1,21 @@
+<div class="container-fluid pt-5 pb-5 bg__catalogo">
+    <div class="container">
+        <div>
+            <h2 class="text-center text-dark titulo fw-bold mt-2 mb-5">{{tituloCatalogo}}</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-sm-6 col-xs-12 p-4" *ngFor="let portafolio of listaPortafolio">
+                <a target="_blank" href="{{portafolio.link}}" class="nav-link">
+                    <div class="card" >
+                        <div class="card__div">
+                            <img src="{{portafolio.imglink}}" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card-body cardbody__bg">
+                            <h5 class="card-title fw-bold text-light text-center ">{{portafolio.subtitulo}}</h5>
+                        </div>
+                    </div>
+                </a>  
+            </div>
+        </div>
+    </div>
+</div>

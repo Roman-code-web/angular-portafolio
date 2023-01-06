@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { BannerComponent } from './banner/banner.component';
 import { InformacionComponent } from './informacion/informacion.component';
 import { SkilsComponent } from './skils/skils.component';
+import { CatalogoComponent } from './catalogo/catalogo.component';
+import { FormComponent } from './form/form.component';
 
 
 
@@ -10,14 +12,17 @@ import { SkilsComponent } from './skils/skils.component';
   declarations: [
     BannerComponent,
     InformacionComponent,
-    SkilsComponent
+    SkilsComponent,
+    CatalogoComponent,
+    FormComponent
   ],
   imports: [
     CommonModule
   ],exports:[
     BannerComponent,
     InformacionComponent,
-    SkilsComponent
+    SkilsComponent,
+    CatalogoComponent
   ]
 })
 export class ComponentesModule { }
