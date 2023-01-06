@@ -1,1 +1,50 @@
-<p>skils works!</p>
+<div class="container-fluid bg pt-5 pb-5 mt-5 mb-5">
+    <div class="row Skills__bg mx-2">
+        <div class="col-md-6 col-sm-12 col-xs-12 px-5 py-5">
+            <div>
+                <h2 class="fw-bold mb-5">Skills</h2>
+                <div class="">
+                    <div class="row">
+                        <div class="col-12 mb-3" *ngFor="let skill of listaSkills; index as i">
+                            <!---texto--->
+                            <div class="d-flex justify-content-between mb-2"><span class="fw-bold">{{skill.nombre}}</span> <span class="nivel__span">{{skill.nivel}}</span> </div>
+                            <!---barra--->
+                            <div>
+                                <div class="progress " role="progressbar" aria-label="Animated striped example" attr.aria-valuenow="{{skill.value}}" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated progress__estilos {{skill.color}}" attr.style="{{skill.style}}"><span class="pe-2">{{skill.porcentaje}}</span> </div>
+                                </div>
+                            </div>
+                            <!----->
+                        </div>
+                </div>
+            </div>
+        </div>    
+        </div>
+        <div class="col-md-6 col-sm-12 col-xs-12 px-5 py-5">
+            <div class="d-flex flex-column justify-content-center align-items-center">
+                <div class="w-95">
+                    <h2 class="fw-bold mb-5 text-center">Educación</h2>
+                <div class="mb-5">
+                    <h5 class="mb-3 fw-bold">ESTUDIOS TÉCNICOS</h5>
+                    <h6 class="titulo__curso fw-bold">Computacón e Informatica</h6>
+                    <h6>Instituto de Educación SuperiorTecnológico Público</h6>
+                </div>
+                <div class="mb-5">
+                    <h5 class="mb-3 fw-bold">CURSO</h5>
+                    <h6 class="titulo__curso fw-bold">HTML, CSS, and Javascript for Web Developers</h6>
+                    <h6>Coursera Johns Hopkins University</h6>
+                </div>
+                <div class="mb-5">
+                    <h5 class="mb-3 fw-bold">CURSO</h5>
+                    <h6 class="titulo__curso fw-bold">Desarrollador Web Front-End</h6>
+                    <h6>Instituto Tecnológico Privado Certus</h6>
+                </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+
+        

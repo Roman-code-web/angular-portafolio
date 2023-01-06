@@ -16,7 +16,8 @@ import { SkilsComponent } from './skils/skils.component';
     CommonModule
   ],exports:[
     BannerComponent,
-    InformacionComponent
+    InformacionComponent,
+    SkilsComponent
   ]
 })
 export class ComponentesModule { }

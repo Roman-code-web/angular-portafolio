@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./informacion.component.css']
 })
 export class InformacionComponent {
-tituloInformacion="¿Quién Soy?";
+tituloInformacion="Sobre mi";
 }
