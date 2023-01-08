@@ -45,7 +45,7 @@
 .card:hover > .cardbody__bg{
     opacity: 1;
     visibility: visible;
-    border-bottom: 5px solid rgb(255, 130, 180) ;
+    border-bottom: 5px solid #6C00FF ;
 }
 
 
