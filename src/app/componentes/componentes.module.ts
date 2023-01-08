@@ -5,6 +5,7 @@ import { InformacionComponent } from './informacion/informacion.component';
 import { SkilsComponent } from './skils/skils.component';
 import { CatalogoComponent } from './catalogo/catalogo.component';
 import { FormComponent } from './form/form.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -17,12 +18,15 @@ import { FormComponent } from './form/form.component';
     FormComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule,
+    FormsModule
   ],exports:[
     BannerComponent,
     InformacionComponent,
     SkilsComponent,
-    CatalogoComponent
+    CatalogoComponent,
+    FormComponent
   ]
 })
 export class ComponentesModule { }

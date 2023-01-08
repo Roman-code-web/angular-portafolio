@@ -1,16 +1,16 @@
 .bg__catalogo{
-    
+   
     background-attachment: fixed;
     background-size: cover;
 }
 .titulo{
-    font-size: 2.5rem;
+    font-size: 3.5rem;
 }
 .card{
     border-radius: 0px;
     border-style: none;
     box-shadow: 0px 0px 10px 6px rgba(0, 0, 0, 0.197);
-    transition: .15s ease all;
+    transition: all .25s ease;
     position: relative;
 }
 .card img{
@@ -28,11 +28,11 @@
 .card__div img:hover{
     -webkit-animation: animacion_imagen 2s ease-out both;
     animation: animacion_imagen 2s ease-out both;
-  
 }
 .cardbody__bg{
-    background-color: rgb(45, 45, 45);
-    display: none;
+    background-color: #000000;
+    opacity: 0;
+    visibility: hidden;
     transition: .15s ease all;
     position: absolute;
     padding-top:10px ;
@@ -43,7 +43,9 @@
 }
 
 .card:hover > .cardbody__bg{
-   display: block;
+    opacity: 1;
+    visibility: visible;
+    border-bottom: 5px solid rgb(255, 130, 180) ;
 }
 
 
