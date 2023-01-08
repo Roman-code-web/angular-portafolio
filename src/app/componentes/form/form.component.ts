@@ -11,7 +11,7 @@ import Swal from 'sweetalert2';
 export class FormComponent implements OnInit{
   //1.Declaro Variables.
   formEnvio!:FormGroup;
-
+  mensaje!:boolean;
   mensajeError={
       errornombre:"",
       erroremail:"",
@@ -51,7 +51,11 @@ export class FormComponent implements OnInit{
   });
   }
 
-  validarInput(nombre:string){
+  inputTouchedDirty(nombre:string){
+    return (this.formEnvio.get(nombre)?.touched || this.formEnvio.get(nombre)?.dirty )|| false
+  }
+
+  validarInput(nombre:string):boolean{
       if((this.formEnvio.get(nombre)?.touched || this.formEnvio.get(nombre)?.dirty) && this.formEnvio.get(nombre)?.errors){
       
         if(this.formEnvio.get(nombre)?.errors?.['required']){
@@ -79,14 +83,14 @@ export class FormComponent implements OnInit{
           this.mensajeError.errormensaje="";
         }
       }
-   return true
-  
+     
+   return ((this.formEnvio.get(nombre)?.touched || this.formEnvio.get(nombre)?.dirty) && this.formEnvio.get(nombre)?.invalid)  || false
   }
   enviarDatos(){
-    Swal.fire({
-      icon: 'success',
-      title: 'Datos Enviados',
-    })
     this.formEnvio.reset();
+    this.mensaje=true;
+    setTimeout(() => {
+      this.mensaje=false;
+    }, 3000);
   }
 }

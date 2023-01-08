@@ -6,6 +6,7 @@ import { SkilsComponent } from './skils/skils.component';
 import { CatalogoComponent } from './catalogo/catalogo.component';
 import { FormComponent } from './form/form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EstilosValidacionDirective } from '../directivas/estilos-validacion.directive';
 
 
 
@@ -15,12 +16,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     InformacionComponent,
     SkilsComponent,
     CatalogoComponent,
-    FormComponent
+    FormComponent,
+    EstilosValidacionDirective
   ],
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    FormsModule
   ],exports:[
     BannerComponent,
     InformacionComponent,

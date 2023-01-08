@@ -40,45 +40,49 @@
                         <div class="col-md-6 col-sm-12 col-xs-12">
                             <div class="mb-2">
                                 <div class="form-floating">
-                                    <input class="form-control form__input" formControlName="nombre" placeholder="Escribe tu nombre" id="nombre" (click)="validarInput('nombre')">
+                                    <input class="form-control form__input" formControlName="nombre" name="nombre" placeholder="Escribe tu nombre" id="nombre" appEstilosValidacion [inputError]="validarInput('nombre')" [touched]="inputTouchedDirty('nombre')"  >
                                     <label for="nombre">Nombre</label>
                                 </div>
-                                <div class="pt-2" *ngIf="validarInput('nombre')"   >
-                                    <p class="ps-2 text-danger">{{mensajeError.errornombre}}</p>
+                                <div class="pt-2"   >
+                                    <p class="ps-2 text-danger" *ngIf="validarInput('nombre')" >{{mensajeError.errornombre}}</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-12 col-xs-12">
                             <div class="mb-2">
                                 <div class="form-floating">
-                                    <input class="form-control form__input" formControlName="email" placeholder="Escribe tu email..." id="email">
+                                    <input class="form-control form__input" formControlName="email"  name="email" placeholder="Escribe tu email..." id="email" appEstilosValidacion [inputError]="validarInput('email')" [touched]="inputTouchedDirty('email')"  >
                                     <label for="email">Email</label>
                                 </div>
-                                <div class="pt-2" *ngIf="validarInput('email')">
-                                    <p class="ps-2 text-danger">{{mensajeError.erroremail}}</p>
+                                <div class="pt-2" >
+                                    <p class="ps-2 text-danger" *ngIf="validarInput('email')">{{mensajeError.erroremail}}</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="mb-2">
                         <div class="form-floating">
-                            <input class="form-control form__input" formControlName="asunto" placeholder="Escribe tu asunto..." id="asunto" >
+                            <input class="form-control form__input" formControlName="asunto" name="asunto" placeholder="Escribe tu asunto..." id="asunto" appEstilosValidacion [inputError]="validarInput('asunto')" [touched]="inputTouchedDirty('asunto')" >
                             <label for="asunto">Asunto</label>
                         </div>
-                        <div class="pt-2" *ngIf="validarInput('asunto')">
-                            <p class="ps-2 text-danger">{{mensajeError.errorasunto}}</p>
+                        <div class="pt-2" >
+                            <p class="ps-2 text-danger" *ngIf="validarInput('asunto')">{{mensajeError.errorasunto}}</p>
                         </div>
                     </div>
                     <div class="mb-2">
                         <div class="form-floating">
-                            <textarea  class="form-control form__input textarea" formControlName="mensaje" placeholder="Escribe tu mensaje..." id="mensaje"></textarea>
+                            <textarea  class="form-control form__input textarea" formControlName="mensaje" name="mensaje" placeholder="Escribe tu mensaje..." id="mensaje" appEstilosValidacion [inputError]="validarInput('mensaje')" [touched]="inputTouchedDirty('mensaje')"></textarea>
                             <label for="mensaje">Mensaje</label>
                         </div>
-                        <div class="pt-2" *ngIf="validarInput('mensaje')">
-                            <p class="ps-2 text-danger">{{mensajeError.errormensaje}}</p>
+                        <div class="pt-2" >
+                            <p class="ps-2 text-danger" *ngIf="validarInput('mensaje')">{{mensajeError.errormensaje}}</p>
                         </div>
                     </div>
-                    
+                    <div *ngIf="mensaje"  >
+                        <div class="alert alert-success" role="alert">
+                            <i class="fa-solid fa-circle-check"></i> Gracias por Comunicarte conmigo....    
+                        </div>
+                    </div>
                     <div *ngIf="formEnvio.invalid else divboton">
                         <button [disabled]="true" class="btn btn__enviar w-100">Enviar</button>
                     </div>
@@ -90,10 +94,6 @@
                     
                 </div>
                 <div>
-
-                    {{formEnvio.get('email')?.errors| json}}
-                    {{validarInput('nombre')}}
-                    {{(formEnvio.get('email')?.touched || formEnvio.get('email')?.dirty) && formEnvio.get('email')?.errors| json}}
                 </div>
             </div>
         </div>
