@@ -1,12 +1,12 @@
-<div class="container-fluid bg__contactanos py-5">
-    <div class="row">
+<div class="container-fluid bg__contactanos  py-5">
+    <div class="row py-5">
         <div class="col-md-6 col-xs-12 my-5 ">
-            <h2 class="text-center contactos__h2 fs-1 mb-3 text-light" >Contactame</h2>
+            <h2 class="text-center contactos__h2 fs-1 mb-3 text-dark fw-bold" >Contactame</h2>
             <div class="container">
                 <div class="row">
                     <div class="col-12 d-flex justify-content-center align-items-center my-4 col__tamaño">
                         <div class="mw-100 mx-auto">
-                            <a  class="nav-link a__redes" href="">
+                            <a  class="nav-link a__redes fs-3" href="https://wa.me/?phone=960231261&text=hola alondra te hablo para.">
                                 <i class="fa-brands fa-whatsapp  text-dark"></i> 960231261
                             </a>
                         </div>
@@ -14,7 +14,7 @@
                     </div>
                     <div class="col-12 d-flex justify-content-center align-items-center my-4 col__tamaño">
                         <div class="mw-100 mx-auto">
-                             <a class="nav-link a__redes text-wrap " href="">
+                             <a class="nav-link a__redes text-wrap fs-3 " href="mailto:selenerg.275@gmail.com">
                                 <i class="fa-solid fa-envelope  text-dark"></i>
                                selenerg.275@gmail.com 
                             </a>
@@ -22,7 +22,7 @@
                     </div>
                     <div class="col-12 d-flex justify-content-center align-items-center my-4 col__tamaño">
                         <div class="mw-100 mx-auto">
-                             <a class="nav-link a__redes" href="">
+                             <a class="nav-link a__redes fs-3" href="">
                                 <i class="fa-solid fa-location-dot  text-dark"></i>
                                 Lima
                             </a>
@@ -35,9 +35,10 @@
             <div class="container form__div  p-5"> 
                 <!-----5. asigno al formulario la variable declarada como formgroup-------->
                  <!----6. asigno los nombres de los input con formcontrolname-------->
-                <form class="mx-2" [formGroup]="formEnvio" (ngSubmit)="enviarDatos()">
+                <form class="mx-2 h-100" [formGroup]="formEnvio" (ngSubmit)="enviarDatos()">
                     <div class="row">
                         <div class="col-md-6 col-sm-12 col-xs-12">
+                            <!-------nombre----->
                             <div class="mb-2">
                                 <div class="form-floating">
                                     <input class="form-control form__input" formControlName="nombre" name="nombre" placeholder="Escribe tu nombre" id="nombre" appEstilosValidacion [inputError]="validarInput('nombre')" [touched]="inputTouchedDirty('nombre')"  >
@@ -49,6 +50,7 @@
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-12 col-xs-12">
+                             <!-------email----->
                             <div class="mb-2">
                                 <div class="form-floating">
                                     <input class="form-control form__input" formControlName="email"  name="email" placeholder="Escribe tu email..." id="email" appEstilosValidacion [inputError]="validarInput('email')" [touched]="inputTouchedDirty('email')"  >
@@ -60,6 +62,7 @@
                             </div>
                         </div>
                     </div>
+                     <!-------asunto----->
                     <div class="mb-2">
                         <div class="form-floating">
                             <input class="form-control form__input" formControlName="asunto" name="asunto" placeholder="Escribe tu asunto..." id="asunto" appEstilosValidacion [inputError]="validarInput('asunto')" [touched]="inputTouchedDirty('asunto')" >
@@ -69,6 +72,7 @@
                             <p class="ps-2 text-danger" *ngIf="validarInput('asunto')">{{mensajeError.errorasunto}}</p>
                         </div>
                     </div>
+                     <!-------mensaje----->
                     <div class="mb-2">
                         <div class="form-floating">
                             <textarea  class="form-control form__input textarea" formControlName="mensaje" name="mensaje" placeholder="Escribe tu mensaje..." id="mensaje" appEstilosValidacion [inputError]="validarInput('mensaje')" [touched]="inputTouchedDirty('mensaje')"></textarea>
@@ -78,17 +82,22 @@
                             <p class="ps-2 text-danger" *ngIf="validarInput('mensaje')">{{mensajeError.errormensaje}}</p>
                         </div>
                     </div>
+                    <!--------alerta---->
                     <div *ngIf="mensaje"  >
                         <div class="alert alert-success" role="alert">
                             <i class="fa-solid fa-circle-check"></i> Gracias por Comunicarte conmigo....    
                         </div>
                     </div>
-                    <div *ngIf="formEnvio.invalid else divboton">
-                        <button [disabled]="true" class="btn btn__enviar w-100">Enviar</button>
+                     <!-------boton----->
+                    <div class="mt-4">
+                        <div *ngIf="formEnvio.invalid else divboton">
+                            <button [disabled]="true" class="btn btn__enviar w-100">Enviar</button>
+                        </div>
+                        <ng-template #divboton>
+                            <button [disabled]="false" class="btn btn__enviar w-100">Enviar</button>
+                        </ng-template>
                     </div>
-                    <ng-template #divboton>
-                        <button [disabled]="false" class="btn btn__enviar w-100">Enviar</button>
-                    </ng-template>
+
                 </form>
                 <div>
                     

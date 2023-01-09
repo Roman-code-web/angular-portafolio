@@ -1,5 +1,6 @@
 .informacion__img{
     width: 100% !important;
+    height: 600px;
     display: flex;
     justify-content: center;
 }
@@ -7,10 +8,20 @@
     font-size: 2.5rem;
 }
 .informacion__p{
-    font-size: 1rem;
+    font-size: 1.1rem;
     text-align: justify
 }
 
+.nav-pills .nav-link{
+    background-color: #6a00ff8d;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+    background-color: #6C00FF;
+}
+
+.tab__div{
+    height:auto;
+}
 @media (max-width: 400px) { 
 .informacion__div__parrafo{
     padding: 10px !important;

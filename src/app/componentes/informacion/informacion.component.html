@@ -1,20 +1,63 @@
 <div class="container-fluid m-0">
         <div class="row">
-            <div class="col-md-6 col-sm-12 col-xs-12 p-0">
-                <img class="informacion__img d-none d-sm-block d-sm-none d-md-block" src="https://thumbs.dreamstime.com/b/chica-con-laptop-expresando-felicidad-grandes-ventas-en-línea-hermosa-joven-mujer-de-invierno-gorro-punto-y-portátil-el-regazo-163658062.jpg" alt="">
+            <div class="col-md-6 col-sm-12 col-xs-12 p-0 ">
+                <img class="informacion__img d-none d-sm-block d-sm-none d-md-block" src="https://img.freepik.com/vector-gratis/personas-usan-telefonos-inteligentes-recibir-noticias-su-vida-diaria_1150-35028.jpg" alt="">
             </div>
-            <div class="col-md-6 col-sm-12 col-xs-12">
-                <div class="d-flex flex-column justify-content-center align-items-center p-5 informacion__div__parrafo">
-                    <h2 class="text-center pb-5 fw-bold informacion__titulo">{{tituloInformacion}}</h2>
-                    <p class="informacion__p">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo assumenda illum eos doloribus obcaecati! Rerum ut ipsa doloremque perspiciatis unde fugit totam ea soluta neque, corporis fuga, omnis, cum perferendis.
-                    </p>
-                    <p class="informacion__p">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo assumenda illum eos doloribus obcaecati! Rerum ut ipsa doloremque perspiciatis unde fugit totam ea soluta neque, corporis fuga, omnis, cum perferendis.
-                    </p>
-                    <div class="my-4">
-                        <button class="btn btn-dark" >Descargar CV</button>
+            <div class="col-md-6 col-sm-12 col-xs-12 py-5 bg__col d-flex flex-column align-items-center justify-content-center">
+                <h2 class="text-center pb-3 fw-bold informacion__titulo">{{tituloInformacion}}</h2>
+                <div class="d-flex flex-column justify-content-center align-items-center py-3 px-3 informacion__div__parrafo w-100">
+                    
+                    <div class="container w-100 ">
+                        <div class="setupForm w-100" id="setupForm">
+                            <ul class="nav nav-pills nav-fill mb-3 gap-3" id="pills-tab" id="formTabs" role="tablist">
+                              <li class="nav-item" role="presentation">
+                                <span class="nav-link text-light fw-bold fs-5 active" id="step1-tab" role="tab" data-bs-toggle="tab" data-bs-target='#step1-tab-pane' aria-controls="step1-tab-pane" aria-selected="true"><span>Información</span></span>
+                              </li>
+                              <li class="nav-item" role="presentation">
+                                <span class="nav-link text-light fw-bold fs-5" id="step2-tab" role="tab" data-bs-toggle="tab" data-bs-target='#step2-tab-pane'  aria-controls="step2-tab-pane" aria-selected="false"><span>Actitudes</span></span>
+                              </li>
+                            </ul>
+                          
+                           
+                              <div class="tab-content" id="formTabsContent">
+                                <div class="tab-pane fade active show" id="step1-tab-pane" role="tabpanel" aria-labelledby="step1-tab" tabindex="0">
+                                  <div class="container tab__div">
+                                    <p class="informacion__p pt-3">
+                                        Egresada del Instituto Superior Tecnológico Público Argentina
+                                        de la carrera técnica de Computación e Informática del
+                                        semestre académico 2019-II con una alta capacidad de
+                                        responsabilidad y creatividad, me considero puntual,
+                                        amable, honrada y dinámica con facilidad de adaptación y
+                                        capacidad de trabajar en equipo.
+                                    </p>
+                                    <div class="container d-flex justify-content-center my-2">
+                                        <a target="_blank" href="https://drive.google.com/file/d/14YxUZDrGBFf4YB5jNq0WgKDgsDhv1ypJ/view" class="btn btn-dark rounded-5 px-5 py-2" >Descargar CV</a>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="tab-pane fade" id="step2-tab-pane" role="tabpanel" aria-labelledby="step2-tab" tabindex="0">
+                                  <div class="container tab__div ">
+                                    <ul class="informacion__p">
+                                        <li>Responsable</li>
+                                        <li>Facilidad para trabajar en equipo</li>
+                                        <li>Proactivo.</li>
+                                        <li>Capacidad de adaptación.</li>
+                                        <li>Puntual.</li>
+                                        <li>Competencias Digitales.</li>
+                                        <li>Creatividad.</li>
+                                        <li>Esfuerzo y lealtad</li>
+                                        <li>Amable</li>
+                                    </ul>
+                                    <div class="container d-flex justify-content-center my-2">
+                                        <a target="_blank" href="https://drive.google.com/file/d/14YxUZDrGBFf4YB5jNq0WgKDgsDhv1ypJ/view" class="btn btn-dark rounded-5 px-5 py-2" >Descargar CV</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                        </div> 
                     </div>
+                    
+                    
                 </div>
             </div>
         </div>
