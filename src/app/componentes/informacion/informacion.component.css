@@ -14,9 +14,11 @@
 
 .nav-pills .nav-link{
     background-color: #6a00ff8d;
+    cursor: pointer;
 }
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link{
     background-color: #6C00FF;
+    cursor: pointer;
 }
 
 .tab__div{

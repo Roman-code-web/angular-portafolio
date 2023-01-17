@@ -36,6 +36,7 @@
 .form__input{
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
+
 .textarea{
     resize: none;
     height: 80px;
@@ -44,7 +45,7 @@
     color: rgb(110, 109, 109);
 }
 .btn__enviar{
-background-color: #000;
+background-color: #6C00FF;
 color: #fff;
 font-weight: 700;
 font-size: 1.5rem;
